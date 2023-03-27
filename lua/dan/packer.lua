@@ -14,9 +14,13 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use('ful1e5/onedark.nvim')
+    use('Mofiqul/dracula.nvim')
+    use('EdenEast/nightfox.nvim')
 	use('nvim-treesitter/nvim-treesitter' , {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
-	use('mbbill/undotree')
+	use('ThePrimeagen/refactoring.nvim')
+    use('ThePrimeagen/harpoon')
+    use('mbbill/undotree')
 	use('tpope/vim-fugitive')
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -40,4 +44,10 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'}, -- Optional
 		}
 	}
+    use {
+        'freddiehaddad/feline.nvim',
+        requires = {
+            {'lewis6991/gitsigns.nvim'}
+        }
+    }
 end)

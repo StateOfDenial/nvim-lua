@@ -22,3 +22,5 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>tn", ":tabn<CR>")
 vim.keymap.set("n", "<leader>tp", ":tabp<CR>")
+
+vim.keymap.set("n", "<leader>gp", ":Gpush<CR>")
