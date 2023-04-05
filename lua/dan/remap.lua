@@ -23,7 +23,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>tn", ":tabn<CR>")
 vim.keymap.set("n", "<leader>tp", ":tabp<CR>")
 
-vim.keymap.set("n", "<leader>gp", ":Gpush<CR>")
+vim.keymap.set("n", "<leader>gp", ":Git push <CR>")
 
 vim.keymap.set("n", "<leader>tpd", ":terminal tf-provider-docs<CR>i")
 
