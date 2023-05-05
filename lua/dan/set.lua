@@ -27,3 +27,5 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.opt.shell = "/bin/zsh"
+
+vim.g.markdown_fenced_languages = { "bash", "python", "go" }
