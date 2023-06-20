@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
+    use('tpope/vim-obsession')
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -51,5 +52,12 @@ return require('packer').startup(function(use)
     }
     use('ThePrimeagen/vim-be-good')
     use('mfussenegger/nvim-dap')
+    use {
+        'rcarriga/nvim-dap-ui',
+        requires = {
+            'mfussenegger/nvim-dap'
+        }
+    }
+    use('leoluz/nvim-dap-go')
     use('fatih/vim-go')
 end)
