@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
     use('ful1e5/onedark.nvim')
     use('Mofiqul/dracula.nvim')
     use('EdenEast/nightfox.nvim')
+    use('neanias/everforest-nvim')
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('ThePrimeagen/refactoring.nvim')
@@ -59,5 +60,4 @@ return require('packer').startup(function(use)
         }
     }
     use('leoluz/nvim-dap-go')
-    use('fatih/vim-go')
 end)
