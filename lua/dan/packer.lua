@@ -8,13 +8,14 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use('ful1e5/onedark.nvim')
     use('Mofiqul/dracula.nvim')
     use('EdenEast/nightfox.nvim')
+    use('neanias/everforest-nvim')
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('ThePrimeagen/refactoring.nvim')
@@ -51,4 +52,5 @@ return require('packer').startup(function(use)
     }
     use('ThePrimeagen/vim-be-good')
     use('mfussenegger/nvim-dap')
+    use('terrastruct/d2-vim')
 end)
