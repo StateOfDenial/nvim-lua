@@ -17,7 +17,7 @@ lsp.ensure_installed({
     'ansiblels',
     'dockerls',
     'marksman',
-    'bash-language-server'
+    'bashls'
 })
 
 local cmp = require('cmp')
@@ -26,7 +26,10 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
     ['<C-y>'] = cmp.mapping.confirm(cmp_select),
+    ['<C-e>'] = cmp.mapping.abort(),
     ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.config.disable,
+    ['<Tab>'] = cmp.config.disable
 })
 
 lsp.setup_nvim_cmp({
