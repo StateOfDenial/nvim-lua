@@ -8,7 +8,6 @@
 })
 ]]
 
--- setup must be called before loading
 --vim.cmd("colorscheme nightfox")
 
 require("everforest").setup({
