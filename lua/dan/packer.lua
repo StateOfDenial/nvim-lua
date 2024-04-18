@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.3',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
@@ -19,7 +19,11 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('ThePrimeagen/refactoring.nvim')
-    use('ThePrimeagen/harpoon')
+    use {
+        'ThePrimeagen/harpoon',
+        branch = "harpoon2",
+        requires = { { "nvim-lua/plenary.nvim" } }
+    }
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('tpope/vim-obsession')
@@ -60,4 +64,20 @@ return require('packer').startup(function(use)
         }
     }
     use('leoluz/nvim-dap-go')
+    use('terrastruct/d2-vim')
+    use('stevearc/oil.nvim')
+    use { 'Exafunction/codeium.vim',
+        config = function()
+            vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end,
+                { expr = true, silent = true })
+            vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end,
+                { expr = true, silent = true })
+            vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end,
+                { expr = true, silent = true })
+            vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end,
+                { expr = true, silent = true })
+            vim.keymap.set('i', '<M-Bslash>', function() return vim.fn['codeium#Complete']() end,
+                { expr = true, silent = true })
+        end
+    }
 end)

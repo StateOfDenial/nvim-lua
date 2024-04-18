@@ -1,4 +1,4 @@
-require('nightfox').setup({
+--[[require('nightfox').setup({
     options = {
         transparent = true,
     },
@@ -6,10 +6,14 @@ require('nightfox').setup({
     specs = {},
     groups = {},
 })
+]]
 
-require('everforest').setup({
-    transparent_background_level = 2
+--vim.cmd("colorscheme nightfox")
+
+require("everforest").setup({
+    background = "soft",
+    transparent_background_level = 0,
+    ui_contrast = "low"
 })
 
--- setup must be called before loading
-vim.cmd("colorscheme everforest")
+vim.cmd([[colorscheme everforest]])
